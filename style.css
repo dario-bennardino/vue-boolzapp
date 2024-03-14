@@ -333,12 +333,18 @@ main{
     width: 55%;
     align-items: end;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .message-received{
     background-color: white;
     width: 55%;
     align-items: end;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .message-send-dx{
