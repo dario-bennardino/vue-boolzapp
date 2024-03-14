@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="box-messages">
-                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-send-message d-flex" :class="msg.status === 'sent' ? 'row-send-message' : ''" >
+                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-send-message d-flex" :class="[msg.status === 'sent' ? 'row-send-message' : 'row-received-message']" >
                             <div class="message-send padding-sm border-rad-sm">
                                 <div class="text-send-message">
                                     <p>{{ msg.message }}</p>               
@@ -229,7 +229,7 @@
                             
                         </div> 
 
-                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-received-message d-flex" :class="msg.status === 'received' ? 'row-received-message' : ''"> 
+                        <!-- <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-received-message d-flex" :class="msg.status === 'received' ? 'row-received-message' : ''"> 
                             <div class="message-received padding-sm border-rad-sm d-flex">
                                 <div class="text-send-message">
                                     <p>{{ msg.message }}</p>               
@@ -244,7 +244,7 @@
                                 </div> 
                             </div>
                            
-                        </div>    
+                        </div>     -->
                     </div>
 
                     <div class="bottombar d-flex">

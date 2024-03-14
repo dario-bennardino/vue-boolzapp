@@ -180,8 +180,10 @@ createApp({
     methods:{
 
         selectContact(contact) {
-            this.selectedContact = contact;
-        }
+            console.log('Contatto selezionato:', contact);
+             this.selectedContact = contact;
+         }
+
        
         
     },
