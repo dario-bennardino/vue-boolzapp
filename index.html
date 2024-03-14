@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="box-messages">
-                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-send-message d-flex">
+                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-send-message d-flex" v-if="msg.status === 'sent'">
                             <div class="message-send padding-sm border-rad-sm">
                                 <div class="text-send-message">
                                     <p>{{ msg.message }}</p>               
