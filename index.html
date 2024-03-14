@@ -57,14 +57,16 @@
 
                     </div>
                     <div class="chat">
-                        <div class="row-chat d-flex">
+
+                        <div v-for="(contact, index) in contacts" class="row-chat d-flex">
+
                             <div class="row-chat-sx d-flex text-center">
                                 <div class="img-row-chat">
-                                    <img src="img/avatar_2.jpg" alt="">
+                                    <img :src="contact.avatar" alt="avatar">
                                 </div>
                                 <div class="text-row-chat">
                                     <div class="name-user">
-                                        Fabio
+                                        {{ contact.name }}
                                     </div>
                                     <div class="text-message-row-chat">
                                         Lorem ipsum dolor sit amet
@@ -74,7 +76,7 @@
                             <div class="time-message d-flex">16.05</div>
                         </div>
 
-                        <div class="row-chat d-flex">
+                        <!-- <div class="row-chat d-flex">
                             <div class="row-chat-sx d-flex text-center">
                                 <div class="img-row-chat">
                                     <img src="img/avatar_3.jpg" alt="">
@@ -174,7 +176,7 @@
                                 </div>
                             </div>
                             <div class="time-message d-flex">15.15</div>
-                        </div>         
+                        </div>          -->
 
                     </div>
                 </section>
