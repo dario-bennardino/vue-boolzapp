@@ -4,6 +4,9 @@ createApp({
 
     data(){
         return {
+
+            selectedContact: null,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -175,6 +178,10 @@ createApp({
     },
 
     methods:{
+
+        selectContact(contact) {
+            this.selectedContact = contact;
+        }
        
         
     },

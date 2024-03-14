@@ -58,7 +58,7 @@
                     </div>
                     <div class="chat">
 
-                        <div v-for="(contact, index) in contacts" class="row-chat d-flex">
+                        <div v-for="(contact, index) in contacts" class="row-chat d-flex" @click="selectContact(contact)">
 
                             <div class="row-chat-sx d-flex text-center">
                                 <div class="img-row-chat">
@@ -222,7 +222,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="time-message-box">16:13</div>
+                                    <div class="time-message-box">{{ msg.date }}</div>
                                 </div>    
 
                             </div>             
@@ -240,7 +240,7 @@
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
     
-                                    <div class="time-message-box">16:15</div>
+                                    <div class="time-message-box">{{ msg.date }}</div>
                                 </div> 
                             </div>
                            
