@@ -9,6 +9,7 @@ createApp({
 
             dataOra: '',
 
+            searchContact: '',
 
             selectedContact: null,
 
