@@ -45,6 +45,8 @@
                             <a href="#">attiva notifiche desktop</a>  
                         </div>
                     </div>
+
+                    <!-- BARRA PER CERCARE CHAT -->
                     <div class="search-chat d-flex">
 
                         <div class="box-search-chat d-flex">
@@ -54,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="search-chat-dx">
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="newMessage" @keyup.enter="sendNewMessage">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>    
 
@@ -252,12 +254,13 @@
                         </div>     -->
                     </div>
 
+                    <!-- BARRA PER SCRIVERE MESSAGGI -->
                     <div class="bottombar d-flex">
                         <div class="emoticon text-center d-flex">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="write-message">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendNewMessage">
                         </div>
                         <div class="vocal-message text-center d-flex">
                             <i class="fa-solid fa-microphone"></i>
