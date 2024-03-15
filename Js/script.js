@@ -1,9 +1,13 @@
+const { DateTime } = luxon;
+
 const {createApp} = Vue;
 
 createApp({
 
     data(){
         return {
+
+            dataOra: '',
 
 
             selectedContact: null,
@@ -192,17 +196,32 @@ createApp({
             
             if(this.newMessage.trim() !== ''){
                 this.selectedContact.messages.push({
-                    message: this.newMessage
+
+                    date: '10/01/2020 15:51:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                    
                 });
 
-                //mi resetta l'input
+                //mi resetta 
                 this.newMessage = '';
 
-                console.log(this.newMessage);
+                console.log(this.selectedContact.messages);
+
+                
                 
             }
 
-         }
+         },
+
+         printData(){
+            // prendo la data di adesso
+          this.dataOra = DateTime.now()
+          .setLocale('it')
+          .toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS)
+      
+          
+          }
 
        
         
