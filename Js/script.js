@@ -209,7 +209,15 @@ createApp({
 
                 console.log(this.selectedContact.messages);
                 
-
+                setTimeout(() => {
+                    const responseMessage = "Ok";
+                    const responseTime = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+                    this.selectedContact.messages.push({
+                        date: responseTime,
+                        message: responseMessage,
+                        status: 'received'
+                    });
+                }, 1000);    
                 
                 
             }
