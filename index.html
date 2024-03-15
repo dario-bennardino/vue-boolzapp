@@ -58,7 +58,7 @@
                     </div>
                     <div class="chat">
 
-                        <div v-for="(contact, index) in contacts" class="row-chat d-flex" @click="selectContact(contact)">
+                        <div v-for="(contact, index) in contacts" class="row-chat d-flex" @click="selectContact(contact)" :class="{'active' : contact === selectedContact}">
 
                             <div class="row-chat-sx d-flex text-center">
                                 <div class="img-row-chat">
@@ -186,7 +186,7 @@
                         <div class="user-topbar-dx d-flex">
                             <div class="img-user-topbar-dx">
                                 <!-- <img src="img/avatar_1.jpg" alt=""> -->
-                                <img :src={{ selectedContact.avatar }} :alt="selectedContact.name">
+                                <img :src="selectedContact.avatar" :alt="selectedContact.name">
                                 
                             </div>
                             <div class="text-user-topbar-dx d-flex">
