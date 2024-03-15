@@ -8,6 +8,8 @@ createApp({
 
             selectedContact: null,
 
+            newMessage: '',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -183,6 +185,23 @@ createApp({
         selectContact(contact) {
             console.log(contact);
              this.selectedContact = contact;
+         },
+
+
+         sendNewMessage(){
+            
+            if(this.newMessage.trim() !== ''){
+                this.selectedContact.messages.push({
+                    message: this.newMessage
+                });
+
+                //mi resetta l'input
+                this.newMessage = '';
+
+                console.log(this.newMessage);
+                
+            }
+
          }
 
        
