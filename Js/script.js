@@ -5,6 +5,7 @@ createApp({
     data(){
         return {
 
+
             selectedContact: null,
 
             contacts: [
@@ -180,13 +181,20 @@ createApp({
     methods:{
 
         selectContact(contact) {
-            console.log('Contatto selezionato:', contact);
+            console.log(contact);
              this.selectedContact = contact;
          }
 
        
         
     },
+    created(){
+
+        this.selectedContact = this.contacts[0];
+
+    },
+
+
     mounted(){
         
       }

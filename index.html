@@ -185,11 +185,13 @@
                     <div class="topbar-dx">
                         <div class="user-topbar-dx d-flex">
                             <div class="img-user-topbar-dx">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <!-- <img src="img/avatar_1.jpg" alt=""> -->
+                                <img :src={{ selectedContact.avatar }} :alt="selectedContact.name">
+                                
                             </div>
                             <div class="text-user-topbar-dx d-flex">
                                 <div class="name-user">
-                                    Michele
+                                    {{selectedContact.name}}
                                 </div>
                                 <div class="last-access">
                                     Ultimo accesso oggi alle 16.26
@@ -206,7 +208,7 @@
                     </div>
 
                     <div class="box-messages">
-                        <div v-for="msg in contacts[0].messages" :key="msg.message" class="row-send-message d-flex" :class="[msg.status === 'sent' ? 'row-send-message' : 'row-received-message']" >
+                        <div v-for="msg in selectedContact.messages" :key="msg.message" class="row-send-message d-flex" :class="[msg.status === 'sent' ? 'row-send-message' : 'row-received-message']" >
                             <div class="message-send padding-sm border-rad-sm">
                                 <div class="text-send-message">
                                     <p>{{ msg.message }}</p>               
