@@ -195,9 +195,10 @@ createApp({
          sendNewMessage(){
             
             if(this.newMessage.trim() !== ''){
+                const now = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
                 this.selectedContact.messages.push({
 
-                    date: '10/01/2020 15:51:00',
+                    date: now,
                     message: this.newMessage,
                     status: 'sent'
                     
@@ -207,6 +208,7 @@ createApp({
                 this.newMessage = '';
 
                 console.log(this.selectedContact.messages);
+                
 
                 
                 
