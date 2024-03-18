@@ -237,6 +237,15 @@ createApp({
        
         
     },
+
+    computed: {
+        filteredContacts() {
+            return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().startsWith(this.searchContact.toLowerCase());
+            });
+        }
+    },
+
     created(){
 
         this.selectedContact = this.contacts[0];

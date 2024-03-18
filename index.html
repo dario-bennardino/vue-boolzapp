@@ -56,14 +56,16 @@
                                 </div>
                             </div>
                             <div class="search-chat-dx">
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact" @keyup.enter="filteredContacts">
                             </div>
                         </div>    
 
                     </div>
                     <div class="chat">
 
-                        <div v-for="(contact, index) in contacts" class="row-chat d-flex" @click="selectContact(contact)" :class="{'active' : contact === selectedContact}">
+                        <!-- <div v-for="(contact, index) in contacts" class="row-chat d-flex" @click="selectContact(contact)" :class="{'active' : contact === selectedContact}"> -->
+                        <div v-for="(contact, index) in filteredContacts" class="row-chat d-flex" @click="selectContact(contact)" :class="{'active' : contact === selectedContact}">
+    
 
                             <div class="row-chat-sx d-flex text-center">
                                 <div class="img-row-chat">
